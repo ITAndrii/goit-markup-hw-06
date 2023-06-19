@@ -689,11 +689,11 @@ body {
 }
 
 .mail-reg-form {
+  display: flex;
+  gap: 24px;
 }
 
 .reg-mail-label {
-  display: flex;
-  gap: 24px;
 }
 
 .reg-mail-input {
