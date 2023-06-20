@@ -905,9 +905,8 @@ body {
 }
 
 .privacy-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  /* align-items: center; */
+  /* gap: 4px; */
   width: 100%;
   padding-left: 24px;
   position: relative;
