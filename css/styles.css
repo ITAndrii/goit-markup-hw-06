@@ -44,7 +44,7 @@ img {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -239,8 +239,7 @@ body {
 }
 
 .section-skill {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 16px;
 }
 
 .visually-hidden {
@@ -259,18 +258,18 @@ body {
 
 .skill-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .skill-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  min-height: 104px;
+  /* min-height: 104px; */
 }
 
 .skill-container-icon {
   width: 100%;
   height: 112px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background: var(--light-bg);
@@ -279,9 +278,10 @@ body {
 }
 
 .skill-title-item {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: currentColor;
   margin-bottom: 8px;
@@ -289,6 +289,7 @@ body {
 
 .job-description {
   padding-bottom: 120px;
+  display: none;
 }
 
 .job-description-title {
@@ -314,21 +315,21 @@ body {
 
 .team-section {
   background: var(--light-bg);
-  padding-top: 120px;
-  padding-bottom: 120px;
-
+  padding: 96px 0;
   margin: 0 auto;
 }
 
 .team-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .team-item {
+  max-width: 264px;
   background-color: var(--main-bg);
-  flex-basis: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -962,4 +963,84 @@ body {
 
 .modal-btn:is(:hover, :focus) {
   background-color: var(--pressed-state);
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 1157px) {
+  .team-item {
+    margin-bottom: 64px;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  .section-skill {
+    padding: 96px 0;
+  }
+
+  .skill-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .skill-item {
+    min-width: 356px;
+    justify-content: center;
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .skill-title-item {
+    text-align: left;
+  }
+
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 24px;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-skill {
+    padding: 120px 0;
+  }
+
+  .skill-list {
+    flex-wrap: nowrap;
+  }
+
+  .skill-item {
+    min-height: 104px;
+    min-width: 264px;
+  }
+
+  .skill-container-icon {
+    display: flex;
+  }
+  .skill-title-item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .skill-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .job-description {
+    display: block;
+  }
+
+  .team-section {
+    padding: 120px 0;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
 }
